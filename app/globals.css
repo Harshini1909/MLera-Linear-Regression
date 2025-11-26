@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "katex/dist/katex.min.css";
+
 @layer base {
   :root {
     --background: 265 25% 97%;
@@ -94,5 +96,24 @@
 
 .slider-pink[data-orientation="horizontal"] > div:first-child > span {
   background-color: #ff6f91;
+}
+
+/* KaTeX styling to match theme */
+.katex {
+  font-size: 1.5em;
+  color: hsl(var(--foreground));
+}
+
+.katex .katex-mathml {
+  display: none;
+}
+
+/* Dark mode KaTeX adjustments */
+.dark .katex {
+  color: #ff815a;
+}
+
+.dark .katex .base {
+  color: #ff815a;
 }
 

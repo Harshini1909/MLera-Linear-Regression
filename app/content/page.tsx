@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Scatter, Tooltip as RechartsTooltip, XAxis, YAxis } from "recharts";
 import { ChevronLeft, LightbulbIcon } from "lucide-react";
+import { BlockMath, InlineMath } from "react-katex";
 
 import Breadcrumb from "@/components/Breadcrumb";
 import ContentCard from "@/components/ContentCard";
@@ -104,8 +105,8 @@ export default function ContentPage() {
 
         <ContentCard title="Mathematical Formulation" number={2} accent>
           <p>The simplest form (Simple Linear Regression) can be expressed as:</p>
-          <div className="my-5 rounded-2xl border border-[#7a4de2]/60 bg-[#1b1030]/80 px-8 py-6 text-center font-mono text-3xl font-semibold text-[#ff815a]">
-            ŷ = β₀ + β₁x + ε
+          <div className="my-5 rounded-2xl border border-[#7a4de2]/60 bg-[#1b1030]/80 px-8 py-6 text-center text-[#ff815a]">
+            <BlockMath math="\hat{y} = \beta_0 + \beta_1 x + \varepsilon" />
           </div>
           <p className="font-semibold text-primary">Where:</p>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
@@ -191,8 +192,8 @@ export default function ContentPage() {
             function quantifies how “wrong” our model’s predictions are compared to the actual values. In linear regression,
             we typically use the Mean Squared Error (MSE) as our cost function.
           </p>
-          <div className="my-4 rounded-2xl border border-[#7a4de2]/60 bg-[#1b1030]/80 px-8 py-6 text-center font-mono text-2xl font-semibold text-[#ff815a]">
-            MSE = (1/n) Σ (yᵢ − ŷᵢ)²
+          <div className="my-4 rounded-2xl border border-[#7a4de2]/60 bg-[#1b1030]/80 px-8 py-6 text-center text-[#ff815a]">
+            <BlockMath math="MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2" />
           </div>
           <p className="mt-4 font-semibold text-primary">Where:</p>
           <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
@@ -206,8 +207,8 @@ export default function ContentPage() {
               <span className="text-accent">→</span> ŷᵢ — predicted value for observation i.
             </li>
           </ul>
-          <div className="my-5 rounded-2xl border border-[#ff7aa2]/60 bg-[#2a1134]/70 px-8 py-6 text-center font-mono text-2xl font-semibold text-[#ff815a]">
-            MSE = (1/n) Σ (yᵢ − (β₀ + β₁xᵢ))²
+          <div className="my-5 rounded-2xl border border-[#ff7aa2]/60 bg-[#2a1134]/70 px-8 py-6 text-center text-[#ff815a]">
+            <BlockMath math="MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - (\beta_0 + \beta_1 x_i))^2" />
           </div>
           <p className="text-sm text-muted-foreground">
             We’ve defined the cost function (Mean Squared Error), the next step is to minimize this error by finding β₀
@@ -224,9 +225,9 @@ export default function ContentPage() {
             OLS is a closed-form analytical solution derived by differentiating the cost function and setting the derivatives to zero.
             It gives a direct formula to compute the best-fitting line without iteration.
           </p>
-          <div className="my-4 space-y-4 rounded-2xl border border-[#6b3ccf]/50 bg-[#170b28]/80 p-6 text-center font-mono text-2xl text-white">
-            <div>β₁ = Σ(xᵢ − x̄)(yᵢ − ȳ) / Σ(xᵢ − x̄)² = Cov(x, y) / Var(x)</div>
-            <div>β₀ = ȳ − β₁x̄</div>
+          <div className="my-4 space-y-4 rounded-2xl border border-[#6b3ccf]/50 bg-[#170b28]/80 p-6 text-center text-white">
+            <BlockMath math="\beta_1 = \frac{\sum_{i=1}^{n}(x_i - \bar{x})(y_i - \bar{y})}{\sum_{i=1}^{n}(x_i - \bar{x})^2} = \frac{\text{Cov}(x, y)}{\text{Var}(x)}" />
+            <BlockMath math="\beta_0 = \bar{y} - \beta_1 \bar{x}" />
           </div>
           <p className="text-sm text-muted-foreground">
             where x̄ and ȳ are the means of the x and y values respectively.
@@ -254,9 +255,9 @@ export default function ContentPage() {
             Gradient Descent is an iterative optimization algorithm. It starts with random initial values for β₀ and β₁ and
             gradually updates them to minimize the cost.
           </p>
-          <div className="my-6 space-y-3 rounded-2xl border border-[#6b3ccf]/50 bg-[#170b28]/80 p-6 text-center font-mono text-2xl text-white">
-            <p>β₁ := β₁ − α · (1/m) Σ (ŷᵢ − yᵢ) xᵢ</p>
-            <p>β₀ := β₀ − α · (1/m) Σ (ŷᵢ − yᵢ)</p>
+          <div className="my-6 space-y-3 rounded-2xl border border-[#6b3ccf]/50 bg-[#170b28]/80 p-6 text-center text-white">
+            <BlockMath math="\beta_1 := \beta_1 - \alpha \cdot \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i) x_i" />
+            <BlockMath math="\beta_0 := \beta_0 - \alpha \cdot \frac{1}{m} \sum_{i=1}^{m} (\hat{y}_i - y_i)" />
           </div>
           <p className="font-semibold text-primary">Where:</p>
           <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
