@@ -69,8 +69,4 @@ npm run start
 🔗 **GitHub Repo:** *https://github.com/Harshini1909/MLera-Linear-Regression*
 🔗 **Vercel Live URL:** *https://mlera-linear-regression-nu.vercel.app*
 
-<<<<<<< HEAD
----
-=======
 
->>>>>>> 51303c6449e5f2b1ffb2d01f68d9e167a5d7b2fb
