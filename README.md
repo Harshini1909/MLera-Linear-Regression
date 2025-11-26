@@ -69,15 +69,4 @@ npm run start
 🔗 **GitHub Repo:** *https://github.com/Harshini1909/MLera-Linear-Regression*
 🔗 **Vercel Live URL:** *https://mlera-nine.vercel.app/*
 
----
-
-## 📝 Approach Summary
-
-Recreated the Linear Regression learning module UI with fully reusable components, deterministic chart simulations, theme persistence, and polished visual interactions. Added a creative Learning Highlights section to enhance clarity and user engagement while maintaining simplicity and design discipline.
-
----
-
-### 🎉 Thank You for Reviewing This Project!
-
-```
 
