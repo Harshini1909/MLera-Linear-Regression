@@ -66,8 +66,8 @@ npm run start
 
 ## 🌐 Deployment
 
-🔗 **GitHub Repo:** *to be added*
-🔗 **Vercel Live URL:** *to be added*
+🔗 **GitHub Repo:** *https://github.com/Harshini1909/MLera-Linear-Regression*
+🔗 **Vercel Live URL:** *https://mlera-nine.vercel.app/*
 
 ---
 
