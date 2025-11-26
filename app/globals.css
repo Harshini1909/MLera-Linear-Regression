@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 265 25% 97%;
+    --foreground: 256 34% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 256 34% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 256 34% 14%;
+
+    --primary: 271 83% 47%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 266 54% 92%;
+    --secondary-foreground: 256 34% 14%;
+
+    --muted: 264 21% 90%;
+    --muted-foreground: 257 13% 40%;
+
+    --accent: 16 95% 66%;
+    --accent-foreground: 256 44% 12%;
+
+    --destructive: 0 84% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 266 21% 84%;
+    --input: 266 21% 84%;
+    --ring: 271 83% 47%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(120deg, hsl(16 95% 66%), hsl(271 83% 47%));
+    --gradient-accent: linear-gradient(180deg, hsl(266 54% 92%), hsl(265 44% 88%));
+    --shadow-glow: 0 25px 60px -35px hsla(271, 83%, 47%, 0.5);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 266 53% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 266 49% 16%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 266 47% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 16 95% 66%;
+    --primary-foreground: 256 44% 12%;
+
+    --secondary: 263 61% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 266 35% 26%;
+    --muted-foreground: 265 15% 72%;
+
+    --accent: 285 73% 64%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 266 37% 32%;
+    --input: 266 37% 32%;
+    --ring: 16 95% 66%;
+
+    --gradient-primary: linear-gradient(115deg, hsl(16 95% 66%), hsl(286 72% 67%));
+    --gradient-accent: linear-gradient(135deg, hsla(266, 45%, 22%, 0.9), hsla(266, 52%, 16%, 0.9));
+    --shadow-glow: 0 40px 80px -45px hsla(16, 95%, 66%, 0.45);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+.slider-pink[data-orientation="horizontal"] > div:first-child {
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #3c1a63;
+}
+
+.slider-pink[data-orientation="horizontal"] > div:first-child > span {
+  background-color: #ff6f91;
+}
+
